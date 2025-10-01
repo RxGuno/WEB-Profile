@@ -1,0 +1,221 @@
+ /* CSS Reset and Global Styles */
+        :root {
+            --primary-color: #0d47a1; /* Deep Blue */
+            --accent-color: #ffc107; /* Gold/Amber Accent */
+            --dark-bg: #1e1e2f; /* Dark Navy Background */
+            --light-text: #f0f0f0;
+            --card-bg: #2a2a3e;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('../IMAGES/black1.jpg');
+            color: var(--light-text);
+            line-height: 1.6;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ffe082;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------------------------------------------------- */
+        /* SECTION 1: Header/Navigation */
+        /* ---------------------------------------------------- */
+        header {
+            background: linear-gradient(to right, #1e1e2f 0%, #333333 70%, #ffc107 90%);            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-image{
+            width: 80px;
+            position: absolute;
+            margin-left: 1350px;
+        }
+        .my-image{
+            position: absolute;
+            
+            margin-left: 800px;
+            margin-bottom: 200px;   
+            width: 600px;
+
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light-text);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li a {
+            padding: 0.5rem 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Mobile Menu Toggle (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* ---------------------------------------------------- */
+        /* General Section Styling */
+        /* ---------------------------------------------------- */
+        section {
+            padding: 80px 0;
+            min-height: 100vh;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--light-text);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 50%;
+        }
+
+        /* ---------------------------------------------------- */
+        /* SECTION 2: Hero/About Me */
+        /* ---------------------------------------------------- */
+        #about {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: #b0b0d0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 10px 25px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #ffeb3b;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------------------- */
+        /* SECTION 3: Projects */
+        /* ---------------------------------------------------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+            color: #cccccc;
+        }
+
+        /* ---------------------------------------------------- */
+        /* SECTION 4: Footer/Contact */
+        /* ---------------------------------------------------- */
+        footer {
+            background-color: #11111d;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #999999;
+        }
+
+        

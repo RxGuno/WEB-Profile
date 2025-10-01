@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me Popup</title>
+    <!-- Importing a clean, professional font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS adapted for a small extension popup, using the original color variables */
+        :root {
+            --primary-color: #0d47a1;
+            --accent-color: #ffc107; /* Gold/Amber Accent */
+            --dark-bg: #1e1e2f; /* Dark Navy Background */
+            --light-text: #f0f0f0;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            /* Set typical extension popup constraints */
+            width: 300px; 
+            max-height: 400px;
+            overflow-y: auto; 
+            
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            padding: 20px; /* Internal padding for content */
+        }
+
+        /* Adapted styles for the About section content */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 1.8rem; /* Adjusted size for the small space */
+            margin-bottom: 10px;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #b0b0d0;
+        }
+        
+        /* CTA Button Styling */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #ffeb3b;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <!-- About Me content, adapted from the original section -->
+    <div class="hero-content">
+        <h1>Hello, I'm Jane Doe.</h1>
+        <p>I am a full-stack developer passionate about building accessible and user-friendly web applications.</p>
+        <!-- Modified the link to open the full portfolio in a new tab -->
+        <a href="https://yourwebsite.com/#projects" target="_blank" class="cta-button">View Full Portfolio</a>
+    </div>
+</body>
+</html>
